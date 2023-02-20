@@ -17,7 +17,7 @@ public class GameModel : Model
     bool m_IsPlay = true;
     bool m_IsPause = false;
 
-    public int lastIndex = 1;
+    public string lastSceneName;
 
     #endregion
 

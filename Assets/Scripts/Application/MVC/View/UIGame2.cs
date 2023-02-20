@@ -33,14 +33,14 @@ public class UIGame2 : View
     void ToGame1()
     {
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
-        GameRoot.Instance.LoadLevel(2);
-        Debug.Log("ToGame1");
+
+        SceneLoader.LoadAddressableScene(Consts.Game1Scene);
     }
 
     void ToMainMenu()
     {
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
-        GameRoot.Instance.LoadLevel(1);
-        Debug.Log("ToMainMenu");
+
+        SceneLoader.LoadAddressableScene(Consts.MainMenuScene);
     }
 }

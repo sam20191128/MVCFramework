@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Sound : Singleton<Sound>
 {
     private AudioSource m_Bg;
     private AudioSource m_effect;
-    public string ResourcesDir = "";
 
     protected override void Awake()
     {
@@ -18,7 +19,7 @@ public class Sound : Singleton<Sound>
     }
 
     //播放背景音乐
-    public void PlayBG(string audioName)
+    public async void PlayBG(string audioName)
     {
         string oldName;
         if (m_Bg.clip == null)
@@ -33,8 +34,8 @@ public class Sound : Singleton<Sound>
         if (oldName != audioName)
         {
             //加载
-            string path = ResourcesDir + "/" + audioName;
-            AudioClip clip = Resources.Load<AudioClip>(path);
+            AudioClip clip = await Addressables.LoadAssetAsync<AudioClip>(audioName).Task;
+
             //播放
             if (clip != null)
             {
@@ -45,12 +46,9 @@ public class Sound : Singleton<Sound>
     }
 
     //音效
-    public void PlayEffect(string audioName)
+    public async void PlayEffect(string audioName)
     {
-        string path = ResourcesDir + "/" + audioName;
-
-        AudioClip clip = Resources.Load<AudioClip>(path);
-
+        AudioClip clip = await Addressables.LoadAssetAsync<AudioClip>(audioName).Task;
         //播放
         m_effect.PlayOneShot(clip);
     }

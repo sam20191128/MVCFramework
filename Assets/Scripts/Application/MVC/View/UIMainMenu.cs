@@ -36,8 +36,8 @@ public class UIMainMenu : View
     void NewGame()
     {
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
-        GameRoot.Instance.LoadLevel(2);
-        Debug.Log("新的游戏");
+        
+        SceneLoader.LoadAddressableScene(Consts.Game1Scene);
     }
 
     void ContinueGame()

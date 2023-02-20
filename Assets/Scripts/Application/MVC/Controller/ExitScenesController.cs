@@ -7,19 +7,24 @@ public class ExitScenesController : Controller
     public override void Execute(object data)
     {
         ScenesArgs e = data as ScenesArgs;
-        switch (e.scenesIndex)
+        switch (e.scenesName)
         {
-            case 1:
+            case Consts.MainMenuScene:
+                Debug.Log("ExitScenesController---Consts.MainMenuScene");
                 break;
-            case 2:
+            case Consts.Game1Scene:
                 GameRoot.Instance.objectPool.Clear();
+                Debug.Log("ExitScenesController---Consts.Game1Scene");
+
                 break;
-            case 3:
+            case Consts.Game2Scene:
                 GameRoot.Instance.objectPool.Clear();
+                Debug.Log("ExitScenesController---Consts.Game2Scene");
+
                 break;
         }
 
         GameModel gm = GetModel<GameModel>();
-        gm.lastIndex = e.scenesIndex;
+        gm.lastSceneName = e.scenesName;
     }
 }

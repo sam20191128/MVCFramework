@@ -5,5 +5,5 @@ using System;
 
 public class ScenesArgs
 {
-    public int scenesIndex;
+    public string scenesName;
 }

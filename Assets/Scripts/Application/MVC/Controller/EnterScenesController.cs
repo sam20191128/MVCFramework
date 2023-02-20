@@ -5,24 +5,31 @@ public class EnterScenesController : Controller
     public override void Execute(object data)
     {
         ScenesArgs e = data as ScenesArgs;
-        switch (e.scenesIndex)
+        GameModel gm;
+        switch (e.scenesName)
         {
-            case 1:
+            case Consts.MainMenuScene:
                 RegisterView(GameObject.Find("UIMainMenu").GetComponent<UIMainMenu>());
                 GameRoot.Instance.sound.PlayBG("Bgm_JieMian");
+                Debug.Log("EnterScenesController---Consts.MainMenuScene");
                 break;
 
-            case 2:
+            case Consts.Game1Scene:
                 RegisterView(GameObject.Find("UIGame1").GetComponent<UIGame1>());
-                GameRoot.Instance.sound.PlayBG("Bgm_JieMian");
-
-                GameModel gm = GetModel<GameModel>();
+                GameRoot.Instance.sound.PlayBG("Bgm_ZhanDou");
+                gm = GetModel<GameModel>();
+                gm.IsPlay = true;
+                Debug.Log("EnterScenesController---Consts.Game1Scene");
 
                 break;
 
-            case 3:
+            case Consts.Game2Scene:
                 RegisterView(GameObject.Find("UIGame2").GetComponent<UIGame2>());
-                GameRoot.Instance.sound.PlayBG("Bgm_JieMian");
+                GameRoot.Instance.sound.PlayBG("Bgm_ZhanDou");
+                gm = GetModel<GameModel>();
+                gm.IsPlay = true;
+                Debug.Log("EnterScenesController---Consts.Game2Scene");
+
                 break;
         }
     }

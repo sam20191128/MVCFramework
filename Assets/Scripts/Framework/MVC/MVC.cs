@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public static class MVC
 {
@@ -30,6 +31,8 @@ public static class MVC
     //注册 Controller
     public static void RegisterController(string eventName, Type controllerType)
     {
+        Debug.Log("RegisterController" + eventName);
+
         CommandMap[eventName] = controllerType;
     }
 
@@ -80,5 +83,7 @@ public static class MVC
                 v.HandleEvent(eventName, data); //执行
             }
         }
+
+        Debug.Log("SendEvent" + eventName);
     }
 }
