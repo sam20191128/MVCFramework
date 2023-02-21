@@ -11,6 +11,8 @@ public class StartUpController : Controller
         RegisterController(Consts.E_EnterScenes, typeof(EnterScenesController));
         RegisterController(Consts.E_ExitScenes, typeof(ExitScenesController));
         
+        RegisterController(Consts.E_PauseGame, typeof(PauseGameController));
+        RegisterController(Consts.E_ResumeGame, typeof(ResumeGameController));
         RegisterController(Consts.E_EndGame, typeof(EndGameController));
 
         //注册 Model

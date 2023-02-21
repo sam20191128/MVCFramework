@@ -24,6 +24,9 @@
     public const string V_UIGame1 = "V_UIGame1";
     public const string V_UIGame2 = "V_UIGame2";
 
+    public const string V_Pause = "V_Pause";
+    public const string V_Resume = "V_Resume";
+    public const string V_Dead = "V_Dead";
 
     //场景名字
     public const string MainMenuScene = "01-MainMenu";

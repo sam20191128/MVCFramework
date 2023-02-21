@@ -8,6 +8,7 @@ public class UIGame2 : View
     private Button toGame1Btn;
     private Button toMainMenuBtn;
 
+    public override string Name => Consts.V_UIGame2;
     GameModel gm;
 
     private void Awake()
@@ -21,10 +22,6 @@ public class UIGame2 : View
         toMainMenuBtn.onClick.AddListener(ToMainMenu);
     }
 
-    public override string Name
-    {
-        get { return Consts.V_UIGame2; }
-    }
 
     public override void HandleEvent(string name, object data)
     {
