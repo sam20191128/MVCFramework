@@ -30,14 +30,14 @@ public class UIGame2 : View
     {
     }
 
-    void ToGame1()
+    private static void ToGame1()
     {
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
 
         SceneLoader.LoadAddressableScene(Consts.Game1Scene);
     }
 
-    void ToMainMenu()
+    private static void ToMainMenu()
     {
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
 

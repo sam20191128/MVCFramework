@@ -85,7 +85,7 @@ public class SceneLoader : Singleton<SceneLoader>
         //事件参数
         ScenesArgs e = new ScenesArgs() {scenesName = SceneName};
         //发布事件
-        Instance.SendEvent(Consts.E_EnterScenes, e);
+        SendEvent(Consts.E_EnterScenes, e);
     }
 
     //发送退出场景事件
@@ -98,11 +98,11 @@ public class SceneLoader : Singleton<SceneLoader>
             scenesName = SceneManager.GetActiveScene().name
         };
 
-        Instance.SendEvent(Consts.E_ExitScenes, e);
+        SendEvent(Consts.E_ExitScenes, e);
     }
 
     //发送事件
-    void SendEvent(string eventName, object data = null)
+    private static void SendEvent(string eventName, object data = null)
     {
         MVC.SendEvent(eventName, data);
     }

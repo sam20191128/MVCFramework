@@ -1,5 +1,7 @@
 ﻿public abstract class Model
 {
+    //数据模型
+
     //名字标识
     public abstract string Name { get; }
 

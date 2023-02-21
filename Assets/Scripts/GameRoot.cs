@@ -37,13 +37,13 @@ public class GameRoot : Singleton<GameRoot>
 
 
     //发送事件
-    void SendEvent(string eventName, object data = null)
+    private static void SendEvent(string eventName, object data = null)
     {
         MVC.SendEvent(eventName, data);
     }
 
     //注册控制器
-    void RegisterController(string eventName, Type controllerType)
+    private static void RegisterController(string eventName, Type controllerType)
     {
         MVC.RegisterController(eventName, controllerType);
     }

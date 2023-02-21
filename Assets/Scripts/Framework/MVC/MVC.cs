@@ -22,7 +22,7 @@ public static class MVC
         Views[view.Name] = view;
     }
 
-    //注册 Model
+    //注册 数据Model
     public static void RegisterModel(Model model)
     {
         Models[model.Name] = model;
@@ -36,7 +36,7 @@ public static class MVC
         CommandMap[eventName] = controllerType;
     }
 
-    //获取 Model
+    //获取 数据Model
     public static T GetModel<T>() where T : Model
     {
         foreach (var m in Models.Values)

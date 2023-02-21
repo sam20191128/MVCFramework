@@ -33,14 +33,14 @@ public class UIMainMenu : View
     {
     }
 
-    void NewGame()
+    private static void NewGame()
     {
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
         
         SceneLoader.LoadAddressableScene(Consts.Game1Scene);
     }
 
-    void ContinueGame()
+    private static void ContinueGame()
     {
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
 
@@ -52,7 +52,7 @@ public class UIMainMenu : View
         Debug.Log("继续游戏");
     }
 
-    void QuitGame()
+    private static void QuitGame()
     {
         Application.Quit();
         Debug.Log("退出游戏");

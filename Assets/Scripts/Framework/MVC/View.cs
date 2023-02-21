@@ -24,7 +24,7 @@ public abstract class View : MonoBehaviour
         MVC.SendEvent(eventName, data);
     }
 
-    //获取模型
+    //获取数据模型
     protected T GetModel<T>() where T : Model
     {
         return MVC.GetModel<T>();
