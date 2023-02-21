@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class MVC
 {
-    //资源
+    //静态字典
     public static Dictionary<string, Model> Models = new Dictionary<string, Model>();
     public static Dictionary<string, View> Views = new Dictionary<string, View>();
     public static Dictionary<string, Type> CommandMap = new Dictionary<string, Type>(); //命令映射   事件-类型
@@ -18,11 +18,11 @@ public static class MVC
             Views.Remove(view.Name);
         }
 
-        view.RegisterAttentionEvent();
+        view.RegisterAttentionEvent(); //注册关注事件
         Views[view.Name] = view;
     }
 
-    //注册 数据Model
+    //注册数据 Model
     public static void RegisterModel(Model model)
     {
         Models[model.Name] = model;
@@ -31,12 +31,12 @@ public static class MVC
     //注册 Controller
     public static void RegisterController(string eventName, Type controllerType)
     {
-        Debug.Log("RegisterController" + eventName);
+        Debug.Log("RegisterController: " + eventName);
 
         CommandMap[eventName] = controllerType;
     }
 
-    //获取 数据Model
+    //获取数据 Model
     public static T GetModel<T>() where T : Model
     {
         foreach (var m in Models.Values)

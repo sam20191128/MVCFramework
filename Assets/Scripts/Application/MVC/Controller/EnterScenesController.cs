@@ -18,6 +18,7 @@ public class EnterScenesController : Controller
                 RegisterView(GameObject.Find("UIGame1").GetComponent<UIGame1>());
                 Sound.Instance.PlayBG("Bgm_ZhanDou");
                 gm = GetModel<GameModel>();
+                gm.IsPause = false;
                 gm.IsPlay = true;
                 Debug.Log("EnterScenesController---Consts.Game1Scene");
 
@@ -27,6 +28,7 @@ public class EnterScenesController : Controller
                 RegisterView(GameObject.Find("UIGame2").GetComponent<UIGame2>());
                 Sound.Instance.PlayBG("Bgm_ZhanDou");
                 gm = GetModel<GameModel>();
+                gm.IsPause = false;
                 gm.IsPlay = true;
                 Debug.Log("EnterScenesController---Consts.Game2Scene");
 

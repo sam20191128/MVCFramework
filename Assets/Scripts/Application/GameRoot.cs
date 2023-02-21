@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 [RequireComponent(typeof(Sound))]
 public class GameRoot : Singleton<GameRoot>
@@ -28,16 +26,16 @@ public class GameRoot : Singleton<GameRoot>
         //事件参数
         ScenesArgs e = new ScenesArgs()
         {
-            //获取当前场景索引
             scenesName = Consts.MainMenuScene
         };
-        //发布事件
+        
+        //发送事件
         SendEvent(Consts.E_EnterScenes, e);
     }
 
 
     //发送事件
-    private static void SendEvent(string eventName, object data = null)
+    public void SendEvent(string eventName, object data = null)
     {
         MVC.SendEvent(eventName, data);
     }

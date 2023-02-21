@@ -17,112 +17,112 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 526d03b9c536f954599e493c86dd7eb8
   m_SerializeEntries:
-  - m_GUID: bc969a389bb415b42b18966276e8151f
-    m_Address: Bgm_JieMian
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 44de10ed153985b4fa0a026412816bef
-    m_Address: Bgm_ZhanDou
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 814b0b03edb6e404fb0271bdac66a617
-    m_Address: Se_UI_Button
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: b07b54e94f3cc1344ae5a4d22fbb1668
-    m_Address: Se_UI_Countdown
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 22f2fd611e0c7e242b07bc86dacb021c
-    m_Address: Se_UI_Dress
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: efa0a050e6efff64d98bd14af4cb621f
-    m_Address: Se_UI_End
+  - m_GUID: 2f2e2578b83c3324b905b3af79f69074
+    m_Address: Se_UI_Number
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: f2ea727d5868a23409790fe8cab72cef
     m_Address: Se_UI_Goal
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: bcc5d48d47ab4af44847d09e95278375
-    m_Address: Se_UI_Hit
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: caceb24e8cb64774d8a7673911e7f3b1
-    m_Address: Se_UI_Huadong
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 03ec0cdb288a8724bb171efbbbe28ce7
-    m_Address: Se_UI_JinBi
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 133b80d71b2702449b05e947ee25b0c1
-    m_Address: Se_UI_Jump
+  - m_GUID: 2a69122e50cd5e546b515dbb5c4c043e
+    m_Address: Se_UI_Speed
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 972d250f98654fc4bbf6c7195e547db9
     m_Address: Se_UI_Kicked
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 95a83ef215a60014f87c4b8a1624abd1
-    m_Address: Se_UI_LvUp
+  - m_GUID: 387e0363ee01f694fa4d9e84379ef373
+    m_Address: Se_UI_Up
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 959b3278d4979c445b2c60a36cb2d890
-    m_Address: Se_UI_Magnet
+  - m_GUID: b44da7a0550dd0c4a919bdd4cd6c424d
+    m_Address: Se_UI_Zhuang
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 3dcf369fc45c62d45920f3b2dcb32bac
-    m_Address: Se_UI_Nail
+  - m_GUID: caceb24e8cb64774d8a7673911e7f3b1
+    m_Address: Se_UI_Huadong
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 2f2e2578b83c3324b905b3af79f69074
-    m_Address: Se_UI_Number
+  - m_GUID: bcc5d48d47ab4af44847d09e95278375
+    m_Address: Se_UI_Hit
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: ef868ce4792758a4daab3708335edc73
-    m_Address: Se_UI_Props
+  - m_GUID: 22f2fd611e0c7e242b07bc86dacb021c
+    m_Address: Se_UI_Dress
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 133b80d71b2702449b05e947ee25b0c1
+    m_Address: Se_UI_Jump
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: bcbc8c2d2b399b14b9941bc7592c5d6e
     m_Address: Se_UI_Revival
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 2a68abfebf1ae064bac2d726dc10849c
-    m_Address: Se_UI_Run
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 62809d595b18c3f4b82d16a997ea6f62
-    m_Address: Se_UI_Shot
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 65b66b52bde672d4bb8b19f2ad75c12e
-    m_Address: Se_UI_Slide
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 2a69122e50cd5e546b515dbb5c4c043e
-    m_Address: Se_UI_Speed
+  - m_GUID: 44de10ed153985b4fa0a026412816bef
+    m_Address: Bgm_ZhanDou
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 051e94e7695cc4e4ca0158f973c7c192
     m_Address: Se_UI_Stars
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 3dcf369fc45c62d45920f3b2dcb32bac
+    m_Address: Se_UI_Nail
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bc969a389bb415b42b18966276e8151f
+    m_Address: Bgm_JieMian
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 959b3278d4979c445b2c60a36cb2d890
+    m_Address: Se_UI_Magnet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 62809d595b18c3f4b82d16a997ea6f62
+    m_Address: Se_UI_Shot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 03ec0cdb288a8724bb171efbbbe28ce7
+    m_Address: Se_UI_JinBi
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 814b0b03edb6e404fb0271bdac66a617
+    m_Address: Se_UI_Button
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 95a83ef215a60014f87c4b8a1624abd1
+    m_Address: Se_UI_LvUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   - m_GUID: f696ce458d5e0c44093156edd838aa75
     m_Address: Se_UI_Time
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 387e0363ee01f694fa4d9e84379ef373
-    m_Address: Se_UI_Up
+  - m_GUID: efa0a050e6efff64d98bd14af4cb621f
+    m_Address: Se_UI_End
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ef868ce4792758a4daab3708335edc73
+    m_Address: Se_UI_Props
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2a68abfebf1ae064bac2d726dc10849c
+    m_Address: Se_UI_Run
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 65b66b52bde672d4bb8b19f2ad75c12e
+    m_Address: Se_UI_Slide
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b07b54e94f3cc1344ae5a4d22fbb1668
+    m_Address: Se_UI_Countdown
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: 4bd226ce79e3b6b41a341b46690c98b9
     m_Address: Se_UI_Whist
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: b44da7a0550dd0c4a919bdd4cd6c424d
-    m_Address: Se_UI_Zhuang
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0

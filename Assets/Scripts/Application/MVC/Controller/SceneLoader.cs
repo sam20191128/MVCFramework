@@ -18,11 +18,6 @@ public class SceneLoader : Singleton<SceneLoader>
     public static bool ShowLoadingScreen { get; private set; }
     public static bool IsSceneLoaded { get; private set; }
 
-    protected override void Awake()
-    {
-        base.Awake();
-    }
-
     //异步加载场景(场景名字，是否有加载画面，是否Add加载，是否加载完马上激活)
     public static void LoadAddressableScene(object sceneKey, bool showLoadingScreen = false, bool loadSceneAdditively = false, bool activateOnLoad = false)
     {
@@ -30,7 +25,6 @@ public class SceneLoader : Singleton<SceneLoader>
     }
 
     //异步加载场景携程
-    // ReSharper disable Unity.PerformanceAnalysis
     static IEnumerator LoadAddressableSceneCoroutine(object sceneKey, bool showLoadingScreen, bool loadSceneAdditively, bool activateOnLoad)
     {
         LoadSceneMode loadSceneMode = loadSceneAdditively ? LoadSceneMode.Additive : LoadSceneMode.Single;
@@ -83,8 +77,9 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         //事件参数
         ScenesArgs e = new ScenesArgs() {scenesName = SceneName};
-        //发布事件
-        SendEvent(Consts.E_EnterScenes, e);
+
+        //发送事件
+        GameRoot.Instance.SendEvent(Consts.E_EnterScenes, e);
     }
 
     //发送退出场景事件
@@ -97,12 +92,7 @@ public class SceneLoader : Singleton<SceneLoader>
             scenesName = SceneManager.GetActiveScene().name
         };
 
-        SendEvent(Consts.E_ExitScenes, e);
-    }
-
-    //发送事件
-    private static void SendEvent(string eventName, object data = null)
-    {
-        MVC.SendEvent(eventName, data);
+        //发送事件
+        GameRoot.Instance.SendEvent(Consts.E_ExitScenes, e);
     }
 }
