@@ -3,11 +3,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-[RequireComponent(typeof(ObjectPool))]
+
 [RequireComponent(typeof(Sound))]
 public class GameRoot : Singleton<GameRoot>
 {
-    [HideInInspector] public ObjectPool objectPool;
     [HideInInspector] public Sound sound;
 
     protected override void Awake()
@@ -18,7 +17,6 @@ public class GameRoot : Singleton<GameRoot>
 
     private void Start()
     {
-        objectPool = ObjectPool.Instance;
         sound = Sound.Instance;
 
         //注册StartUpController

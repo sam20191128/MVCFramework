@@ -13,12 +13,10 @@ public class ExitScenesController : Controller
                 Debug.Log("ExitScenesController---Consts.MainMenuScene");
                 break;
             case Consts.Game1Scene:
-                GameRoot.Instance.objectPool.Clear();
                 Debug.Log("ExitScenesController---Consts.Game1Scene");
 
                 break;
             case Consts.Game2Scene:
-                GameRoot.Instance.objectPool.Clear();
                 Debug.Log("ExitScenesController---Consts.Game2Scene");
 
                 break;
