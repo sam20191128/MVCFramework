@@ -53,7 +53,6 @@ public class SceneLoader : Singleton<SceneLoader>
         {
             LoadingCompleted?.Invoke();
 
-            ExitSceneEvent(); //发送退出场景事件
             EnterSceneEvent(sceneKey.ToString()); //发送加载新的场景事件
 
             yield break;
@@ -70,8 +69,8 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         loadedSceneInstance.ActivateAsync().completed += _ =>
         {
-            ExitSceneEvent(); //发送退出场景事件
             EnterSceneEvent(loadedSceneInstance.Scene.name); //发送加载新的场景事件
+            Debug.Log(loadedSceneInstance.Scene.name);
 
             IsSceneLoaded = false;
             loadedSceneInstance = default;
@@ -80,7 +79,7 @@ public class SceneLoader : Singleton<SceneLoader>
     }
 
     //发送加载新的场景事件
-    private static void EnterSceneEvent(string SceneName)
+    public static void EnterSceneEvent(string SceneName)
     {
         //事件参数
         ScenesArgs e = new ScenesArgs() {scenesName = SceneName};
@@ -89,7 +88,7 @@ public class SceneLoader : Singleton<SceneLoader>
     }
 
     //发送退出场景事件
-    private static void ExitSceneEvent()
+    public static void ExitSceneEvent()
     {
         //事件参数
         ScenesArgs e = new ScenesArgs()

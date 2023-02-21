@@ -35,6 +35,7 @@ public class UIGame2 : View
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
 
         SceneLoader.LoadAddressableScene(Consts.Game1Scene);
+        SceneLoader.ExitSceneEvent();
     }
 
     private static void ToMainMenu()
@@ -42,5 +43,6 @@ public class UIGame2 : View
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
 
         SceneLoader.LoadAddressableScene(Consts.MainMenuScene);
+        SceneLoader.ExitSceneEvent();
     }
 }

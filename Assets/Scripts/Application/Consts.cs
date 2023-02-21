@@ -17,7 +17,7 @@
 
     public const string UssFade = "fade";
 
-    public const string MainMenuScene = "MainMenu";
-    public const string Game1Scene = "Game1";
-    public const string Game2Scene = "Game2";
+    public const string MainMenuScene = "01-MainMenu";
+    public const string Game1Scene = "02-Game1";
+    public const string Game2Scene = "03-Game2";
 }

@@ -42,6 +42,8 @@ public class Sound : Singleton<Sound>
                 m_Bg.clip = clip;
                 m_Bg.Play();
             }
+
+            Debug.Log(clip.name);
         }
     }
 

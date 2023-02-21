@@ -36,12 +36,15 @@ public class UIMainMenu : View
     private static void NewGame()
     {
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
-        
+
         SceneLoader.LoadAddressableScene(Consts.Game1Scene);
+        SceneLoader.ExitSceneEvent();
     }
 
     private static void ContinueGame()
     {
+        SceneLoader.ExitSceneEvent();
+
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
 
         // //转换场景,读取进度

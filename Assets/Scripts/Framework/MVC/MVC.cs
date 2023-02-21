@@ -84,6 +84,6 @@ public static class MVC
             }
         }
 
-        Debug.Log("SendEvent" + eventName);
+        Debug.Log("SendEvent: " + eventName);
     }
 }
