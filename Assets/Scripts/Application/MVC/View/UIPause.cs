@@ -3,18 +3,28 @@ using UnityEngine.UI;
 
 public class UIPause : View
 {
-    public Text txtDis;
-    public Text txtCoin;
-    public Text txtScore;
-    public SkinnedMeshRenderer skm;
-    public MeshRenderer render;
+    private Button resumeBtn;
+    private Button toMainMenuBtn;
 
     public override string Name => Consts.V_Pause;
     GameModel gm;
 
-    public void Hide()
+    public override void HandleEvent(string name, object data)
     {
-        gameObject.SetActive(false);
+        //接受事件后，处理事件
+    }
+
+    private void Awake()
+    {
+        gm = GetModel<GameModel>();
+
+        resumeBtn = transform.GetChild(0).GetChild(0).GetComponent<Button>();
+        toMainMenuBtn = transform.GetChild(0).GetChild(1).GetComponent<Button>();
+
+        resumeBtn.onClick.AddListener(OnResumeClick);
+        toMainMenuBtn.onClick.AddListener(OnToMainMenuClick);
+
+        UpdateUI();
     }
 
     public void Show()
@@ -23,9 +33,17 @@ public class UIPause : View
         UpdateUI();
     }
 
-    public override void HandleEvent(string name, object data)
+    void UpdateUI()
     {
+        gm = GetModel<GameModel>();
+        //更新gm数据
     }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+
 
     public void OnResumeClick()
     {
@@ -34,21 +52,11 @@ public class UIPause : View
         SendEvent(Consts.E_ResumeGame);
     }
 
-    public void OnHomeClick()
+    private static void OnToMainMenuClick()
     {
-        Sound.Instance.PlayEffect("Se_UI_Button");
+        GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
+
         SceneLoader.LoadAddressableScene(Consts.MainMenuScene);
         SceneLoader.ExitSceneEvent();
-    }
-
-    private void Awake()
-    {
-        UpdateUI();
-    }
-
-    void UpdateUI()
-    {
-        gm = GetModel<GameModel>();
-        //更新UI数据
     }
 }

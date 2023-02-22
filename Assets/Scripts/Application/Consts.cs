@@ -1,6 +1,7 @@
 ﻿public static class Consts
 {
-    // Event
+    #region Event
+
     public const string E_StartUp = "E_StartUp";
     public const string E_EnterScenes = "E_EnterScenes";
     public const string E_ExitScenes = "E_ExitScenes";
@@ -10,23 +11,36 @@
     public const string E_ContinueGame = "E_ContinueGame"; //继续游戏/Resume播放完成后继续游戏
     public const string E_EndGame = "E_EndGame"; //结束游戏
 
-    /// <summary>
-    /// UI相关
-    /// </summary>
+    public const string E_FinalShowUI = "E_FinalShowUI"; //结算事件
 
-    // 继续游戏
+    public const string E_BriberyClick = "E_BriberyClick"; //贿赂
 
-    // Model
+    #endregion
+
+    #region Model
+
     public const string M_GameModel = "M_GameModel";
 
-    // View
+    #endregion
+
+
+    #region View
+
+    public const string V_PlayerManager = "V_PlayerManager";
+
     public const string V_MainMenu = "V_MainMenu";
-    public const string V_UIGame1 = "V_UIGame1";
+    public const string V_UIBoard = "V_UIBoard";
     public const string V_UIGame2 = "V_UIGame2";
 
     public const string V_Pause = "V_Pause";
     public const string V_Resume = "V_Resume";
     public const string V_Dead = "V_Dead";
+
+    public const string V_FinalScore = "V_FinalScore";
+
+    #endregion
+
+    #region 场景
 
     //场景名字
     public const string MainMenuScene = "01-MainMenu";
@@ -35,4 +49,12 @@
 
     //场景切换淡入淡出过渡
     public const string UssFade = "fade";
+
+    #endregion
+
+    #region 常量
+
+    public const int InitCoin = 5000; //初始金币
+
+    #endregion
 }

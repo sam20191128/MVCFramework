@@ -9,6 +9,13 @@ public class UIMainMenu : View
     private Button continueBtn;
     private Button quitBtn;
 
+    public override string Name => Consts.V_MainMenu;
+
+    public override void HandleEvent(string name, object data)
+    {
+        //接受事件后，处理事件
+    }
+
     GameModel gm;
 
     private void Awake()
@@ -24,14 +31,6 @@ public class UIMainMenu : View
         quitBtn.onClick.AddListener(QuitGame);
     }
 
-    public override string Name
-    {
-        get { return Consts.V_MainMenu; }
-    }
-
-    public override void HandleEvent(string name, object data)
-    {
-    }
 
     private static void NewGame()
     {

@@ -1,0 +1,31 @@
+V 2.1.r3
+- Fixed SendMessage warning.
+- Optimized Header monobehavior script.
+- Improved Undo functionality.
+- Ensured editor window is refreshed after each undo action.
+
+V 2.1.r0
+- Added Undo support.
+- Added shortcut for opening ColoredHeaderCreator window, CTRL + H.
+- Organized code for easier user modification.
+- Headers will now display during Playmode (Thanks Vincent for suggestion).
+- When creating a header, you can choose to use the EditorOnly tag or not (Thanks Vincent for suggestion).
+- You can now create a header using the object create menu in the hierarchy. (Thanks jmhoubre for suggestion).
+- Save presets are no longer hardcoded to a save location, you can choose where to save (Thanks Travis Johnson for suggestion).
+
+V 2.0.r1
+- Added assembly definitions (Thanks Glenneroo for implementation).
+- Removed unused code (Thanks Glenneroo for implementation).
+- Fixed "Not being able to build game" due to files being excluded (Thanks Glenneroo for implementation).
+
+V 2.0.r0
+- Updated Colored Header Creator Window UI to be more approachable.
+- Updated how properties are saved on Header Game Objects (reinstall plugin if updating from 1.0.r0).
+- Added a way to change existing Headers using the Inspector.
+- Added Header presets. You can now save and load Headers to and from a Preset file.
+- Created Headers can now be saved in the scene without having to modify the scene to trigger a save.
+- Delete all Headers now delete Headers only and not the Header and its children too.
+- General optimization of drawing Headers.
+
+V 1.0.r0
+- Initial Release.

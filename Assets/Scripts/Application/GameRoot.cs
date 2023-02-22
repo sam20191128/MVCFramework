@@ -33,7 +33,6 @@ public class GameRoot : Singleton<GameRoot>
         SendEvent(Consts.E_EnterScenes, e);
     }
 
-
     //发送事件
     public void SendEvent(string eventName, object data = null)
     {

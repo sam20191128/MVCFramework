@@ -1,0 +1,18 @@
+Created by Dedrick "Baedrick" Koh
+Version 2.1.r2
+
+To open colored header creator use:
+Tools > Colored Header Creator
+
+Contact: https://baedrick.carrd.co/
+
+Suggestions to improve the code, or functionality please reach out to me dedrickkoh1@gmail.com
+
+Any issues please report in an email to dedrickkoh1@gmail.com
+In the email please state what were the steps you took to encounter the error. Screenshots are encouraged.
+
+Contribution credit:
+- Glenneroo (general optimisation and bug fixes)
+- Vincent (suggestions)
+- Travis Johnson (suggestions)
+- jmhoubre (suggestions)

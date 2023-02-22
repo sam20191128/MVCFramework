@@ -8,55 +8,56 @@ public class GameModel : Model
 
     #endregion
 
-    #region 事件
-
-    #endregion
 
     #region 字段
 
-    private bool m_IsPlay = true;
-    private bool m_IsPause = false;
-
     public string lastSceneName;
+    int m_Coin;
 
     #endregion
 
     #region 属性
 
-    public override string Name
+    public override string Name => Consts.M_GameModel;
+
+    public bool IsPlay { get; set; } = true;
+
+    public bool IsPause { get; set; } = false;
+
+    public int Invincible { get; set; }
+
+    public int Coin
     {
-        get { return Consts.M_GameModel; }
-    }
+        get => m_Coin;
 
-    public bool IsPlay
-    {
-        get { return m_IsPlay; }
-
-        set { m_IsPlay = value; }
-    }
-
-    public bool IsPause
-    {
-        get { return m_IsPause; }
-
-        set { m_IsPause = value; }
+        set
+        {
+            m_Coin = value;
+            Debug.Log("现在还剩" + value + "钱");
+        }
     }
 
     #endregion
 
     #region 方法
 
-    #endregion
+    //初始化
+    public void Init()
+    {
+        m_Coin = Consts.InitCoin;
+    }
 
-    #region Unity回调
+    //扣除金币
+    public bool GetMoney(int coin)
+    {
+        if (coin <= Coin)
+        {
+            Coin -= coin;
+            return true;
+        }
 
-    #endregion
-
-    #region 事件回调
-
-    #endregion
-
-    #region 帮助方法
+        return false;
+    }
 
     #endregion
 }

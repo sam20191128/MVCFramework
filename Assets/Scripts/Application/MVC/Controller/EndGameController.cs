@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using UnityEngine;
 
 public class EndGameController : Controller
 {
@@ -9,5 +6,8 @@ public class EndGameController : Controller
     {
         GameModel gm = GetModel<GameModel>();
         gm.IsPlay = false;
+
+        UIDead dead = GetView<UIDead>();
+        dead.Show();
     }
 }

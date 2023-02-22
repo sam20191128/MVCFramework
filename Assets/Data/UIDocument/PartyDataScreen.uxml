@@ -1,13 +1,242 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Data/StyleSheets/USS_PartyDataScreen.uss?fileID=7433441132597879392&amp;guid=b36d0839059d6f54aa52875a16b5e1a5&amp;type=3#USS_PartyDataScreen" />
     <ui:VisualElement name="BackGround" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); padding-left: 4%; padding-right: 4%; padding-top: 4%; padding-bottom: 4%;">
-        <ui:VisualElement name="TltieContainer" style="height: 10%; margin-bottom: 1%;">
-            <ui:Label text="PARTY DATA" display-tooltip-when-elided="true" name="TltieLabel" style="-unity-font-style: italic; font-size: 100px; color: rgb(255, 255, 255); -unity-text-align: middle-left;" />
+        <ui:VisualElement name="TltieContainer" style="height: 10%; margin-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; background-color: rgba(0, 0, 0, 0.2); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+            <ui:Label text="PARTY DATA" display-tooltip-when-elided="true" name="TltieLabel" style="-unity-font-style: italic; font-size: 100px; color: rgb(255, 255, 255); -unity-text-align: middle-left; background-color: rgba(0, 0, 0, 0); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
         </ui:VisualElement>
         <ui:VisualElement name="BodyContainer" style="flex-grow: 1; flex-direction: row;">
-            <ui:VisualElement name="CharacterDataPanel" style="flex-basis: 25%; background-color: rgba(0, 0, 0, 0.39); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
-            <ui:VisualElement name="CharacterDataPanel" style="flex-basis: 25%; background-color: rgba(0, 0, 0, 0.39); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
-            <ui:VisualElement name="CharacterDataPanel" style="flex-basis: 25%; background-color: rgba(0, 0, 0, 0.39); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
-            <ui:VisualElement name="CharacterDataPanel" style="flex-basis: 25%; background-color: rgba(0, 0, 0, 0.39); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
+            <ui:VisualElement name="CharacterDataPanel" style="flex-basis: 25%; background-color: rgba(0, 0, 0, 0.45); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+                <ui:VisualElement name="AvatorContainer" style="flex-basis: 50%; background-image: none; margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 0; background-color: rgba(0, 0, 0, 0.2); border-top-left-radius: 10px; border-bottom-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 0;">
+                    <ui:VisualElement name="Avator" style="background-image: url(&apos;project://database/Assets/TextMesh%20Pro/Sprites/EmojiOne.png?fileID=2800000&amp;guid=dffef66376be4fa480fb02b19edbe903&amp;type=3#EmojiOne&apos;); width: auto; height: auto; -unity-background-scale-mode: scale-to-fit; flex-grow: 1; flex-direction: column;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="NameContainer">
+                    <ui:Label text="Name" display-tooltip-when-elided="true" name="NameLabel" style="color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 35px; background-color: rgb(214, 100, 100); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="StatsContainer" style="flex-grow: 1; margin-left: 5%; margin-right: 5%; margin-top: 0; margin-bottom: 5%; border-top-left-radius: 0; border-bottom-left-radius: 10px; border-top-right-radius: 0; border-bottom-right-radius: 10px; background-color: rgba(0, 0, 0, 0.2);">
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CharacterDataPanel" style="flex-basis: 25%; background-color: rgba(0, 0, 0, 0.45); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+                <ui:VisualElement name="AvatorContainer" style="flex-basis: 50%; background-image: none; margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 0; background-color: rgba(0, 0, 0, 0.2); border-top-left-radius: 10px; border-bottom-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 0;">
+                    <ui:VisualElement name="Avator" style="background-image: url(&apos;project://database/Assets/TextMesh%20Pro/Sprites/EmojiOne.png?fileID=2800000&amp;guid=dffef66376be4fa480fb02b19edbe903&amp;type=3#EmojiOne&apos;); width: auto; height: auto; -unity-background-scale-mode: scale-to-fit; flex-grow: 1; flex-direction: column;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="NameContainer">
+                    <ui:Label text="Name" display-tooltip-when-elided="true" name="NameLabel" style="color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 35px; background-color: rgb(214, 100, 100); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="StatsContainer" style="flex-grow: 1; margin-left: 5%; margin-right: 5%; margin-top: 0; margin-bottom: 5%; border-top-left-radius: 0; border-bottom-left-radius: 10px; border-top-right-radius: 0; border-bottom-right-radius: 10px; background-color: rgba(0, 0, 0, 0.2);">
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CharacterDataPanel" style="flex-basis: 25%; background-color: rgba(0, 0, 0, 0.45); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+                <ui:VisualElement name="AvatorContainer" style="flex-basis: 50%; background-image: none; margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 0; background-color: rgba(0, 0, 0, 0.2); border-top-left-radius: 10px; border-bottom-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 0;">
+                    <ui:VisualElement name="Avator" style="background-image: url(&apos;project://database/Assets/TextMesh%20Pro/Sprites/EmojiOne.png?fileID=2800000&amp;guid=dffef66376be4fa480fb02b19edbe903&amp;type=3#EmojiOne&apos;); width: auto; height: auto; -unity-background-scale-mode: scale-to-fit; flex-grow: 1; flex-direction: column;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="NameContainer">
+                    <ui:Label text="Name" display-tooltip-when-elided="true" name="NameLabel" style="color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 35px; background-color: rgb(214, 100, 100); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="StatsContainer" style="flex-grow: 1; margin-left: 5%; margin-right: 5%; margin-top: 0; margin-bottom: 5%; border-top-left-radius: 0; border-bottom-left-radius: 10px; border-top-right-radius: 0; border-bottom-right-radius: 10px; background-color: rgba(0, 0, 0, 0.2);">
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="CharacterDataPanel" style="flex-basis: 25%; background-color: rgba(0, 0, 0, 0.45); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+                <ui:VisualElement name="AvatorContainer" style="flex-basis: 50%; background-image: none; margin-left: 5%; margin-right: 5%; margin-top: 5%; margin-bottom: 0; background-color: rgba(0, 0, 0, 0.2); border-top-left-radius: 10px; border-bottom-left-radius: 0; border-top-right-radius: 10px; border-bottom-right-radius: 0;">
+                    <ui:VisualElement name="Avator" style="background-image: url(&apos;project://database/Assets/TextMesh%20Pro/Sprites/EmojiOne.png?fileID=2800000&amp;guid=dffef66376be4fa480fb02b19edbe903&amp;type=3#EmojiOne&apos;); width: auto; height: auto; -unity-background-scale-mode: scale-to-fit; flex-grow: 1; flex-direction: column;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="NameContainer">
+                    <ui:Label text="Name" display-tooltip-when-elided="true" name="NameLabel" style="color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 35px; background-color: rgb(214, 100, 100); border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="StatsContainer" style="flex-grow: 1; margin-left: 5%; margin-right: 5%; margin-top: 0; margin-bottom: 5%; border-top-left-radius: 0; border-bottom-left-radius: 10px; border-top-right-radius: 0; border-bottom-right-radius: 10px; background-color: rgba(0, 0, 0, 0.2);">
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="StatContainer" style="flex-direction: row; height: 46px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                        <ui:VisualElement name="StatTltieContainer" style="flex-basis: 50%; background-color: rgb(134, 209, 131); border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatTltieLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement name="StatValueContainer" style="flex-basis: 50%; border-top-right-radius: 10px; border-bottom-right-radius: 10px; background-color: rgb(209, 131, 180);">
+                            <ui:Label text="Label" display-tooltip-when-elided="true" name="StatValueLabel" style="color: rgb(255, 255, 255); flex-grow: 1;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

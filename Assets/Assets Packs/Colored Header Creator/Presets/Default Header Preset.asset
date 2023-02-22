@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f06f6242883e20944beddf62990e2898, type: 3}
+  m_Name: Default Header Preset
+  m_EditorClassIdentifier: 
+  coloredHeaderPreset:
+  - headerText: System
+    headerColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    editorOnly: 1
+    textAlignmentOptions: 1
+    fontStyleOptions: 0
+    fontSize: 12
+    fontColor: {r: 1, g: 1, b: 1, a: 1}
+    dropShadow: 0
+  - headerText: UI
+    headerColor: {r: 0.33333334, g: 0.73333335, b: 0.6901961, a: 1}
+    editorOnly: 1
+    textAlignmentOptions: 1
+    fontStyleOptions: 0
+    fontSize: 12
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    dropShadow: 0
+  - headerText: Cinemachine
+    headerColor: {r: 0.33333334, g: 0.73333335, b: 0.6901961, a: 1}
+    editorOnly: 1
+    textAlignmentOptions: 1
+    fontStyleOptions: 0
+    fontSize: 12
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    dropShadow: 0
+  - headerText: Player
+    headerColor: {r: 0.33333334, g: 0.73333335, b: 0.6901961, a: 1}
+    editorOnly: 1
+    textAlignmentOptions: 1
+    fontStyleOptions: 0
+    fontSize: 12
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    dropShadow: 0
+  - headerText: Environment
+    headerColor: {r: 0.33333334, g: 0.73333335, b: 0.6901961, a: 1}
+    editorOnly: 1
+    textAlignmentOptions: 1
+    fontStyleOptions: 0
+    fontSize: 12
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    dropShadow: 0
+  - headerText: Lighting
+    headerColor: {r: 0.33333334, g: 0.73333335, b: 0.6901961, a: 1}
+    editorOnly: 1
+    textAlignmentOptions: 1
+    fontStyleOptions: 0
+    fontSize: 12
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    dropShadow: 0
+  - headerText: Audio
+    headerColor: {r: 0.33333334, g: 0.73333335, b: 0.6901961, a: 1}
+    editorOnly: 1
+    textAlignmentOptions: 1
+    fontStyleOptions: 0
+    fontSize: 12
+    fontColor: {r: 0, g: 0, b: 0, a: 1}
+    dropShadow: 0
+  - headerText: Spawned Prefabs
+    headerColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    editorOnly: 1
+    textAlignmentOptions: 1
+    fontStyleOptions: 0
+    fontSize: 12
+    fontColor: {r: 1, g: 1, b: 1, a: 1}
+    dropShadow: 0
