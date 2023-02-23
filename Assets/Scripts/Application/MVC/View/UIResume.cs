@@ -30,12 +30,14 @@ public class UIResume : View
     //开始计数协程
     IEnumerator StartCountCoroutine()
     {
-        while (countDownCount > 0)
+        int i = 3;
+
+        while (i > 0)
         {
-            countDown.text = countDownCount.ToString();
-            countDownCount--;
+            countDown.text = i.ToString();
+            i--;
             yield return new WaitForSeconds(1);
-            if (countDownCount <= 0)
+            if (i <= 0)
             {
                 break;
             }
