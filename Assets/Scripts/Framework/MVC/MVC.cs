@@ -9,35 +9,31 @@ public static class MVC
     public static Dictionary<string, View> Views = new Dictionary<string, View>();
     public static Dictionary<string, Type> CommandMap = new Dictionary<string, Type>(); //命令映射   事件-类型
 
-    //注册 View
-    public static void RegisterView(View view)
+    public static void RegisterView(View view) //注册View
     {
         //防止View重复注册
-        if (Views.ContainsKey(view.Name))
+        if (Views.ContainsKey(view.Name)) //如果已包含View
         {
-            Views.Remove(view.Name);
+            Views.Remove(view.Name); //移除View
         }
 
         view.RegisterAttentionEvent(); //注册关注事件
         Views[view.Name] = view;
     }
 
-    //注册数据 Model
-    public static void RegisterModel(Model model)
+    public static void RegisterModel(Model model) //注册数据Model
     {
         Models[model.Name] = model;
     }
 
-    //注册 Controller
-    public static void RegisterController(string eventName, Type controllerType)
+    public static void RegisterController(string eventName, Type controllerType) //注册Controller
     {
         Debug.Log("RegisterController: " + eventName);
 
         CommandMap[eventName] = controllerType;
     }
 
-    //获取数据 Model
-    public static T GetModel<T>() where T : Model
+    public static T GetModel<T>() where T : Model //获取数据Model
     {
         foreach (var m in Models.Values)
         {
@@ -50,8 +46,7 @@ public static class MVC
         return null;
     }
 
-    //获取 View
-    public static T GetView<T>() where T : View
+    public static T GetView<T>() where T : View //获取View
     {
         foreach (var v in Views.Values)
         {
@@ -64,23 +59,22 @@ public static class MVC
         return null;
     }
 
-    //发送事件
-    public static void SendEvent(string eventName, object data = null)
+    public static void SendEvent(string eventName, object data = null) //发送事件
     {
         //Controller执行
-        if (CommandMap.ContainsKey(eventName))
+        if (CommandMap.ContainsKey(eventName)) //如果CommandMap包含eventName
         {
-            Type t = CommandMap[eventName];
-            Controller c = Activator.CreateInstance(t) as Controller; //控制器生成
-            c.Execute(data); //执行
+            Type type = CommandMap[eventName]; //Type=eventName
+            Controller controller = Activator.CreateInstance(type) as Controller; //Controller生成，CreateInstance---寻找匹配的构造方法来创建对象
+            controller.Execute(data); //Controller执行
         }
 
         //View处理
         foreach (var v in Views.Values)
         {
-            if (v.AttentionList.Contains(eventName))
+            if (v.AttentionList.Contains(eventName)) //如果View关注事件里包含eventName
             {
-                v.HandleEvent(eventName, data); //执行
+                v.HandleEvent(eventName, data); //View执行
             }
         }
 

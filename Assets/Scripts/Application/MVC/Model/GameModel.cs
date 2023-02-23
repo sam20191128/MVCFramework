@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameModel : Model
@@ -11,8 +9,16 @@ public class GameModel : Model
 
     #region 字段
 
+    private bool m_IsPlay = true;
+    private bool m_IsPause = false;
+
     public string lastSceneName;
-    int m_Coin;
+
+    private int m_Level;
+    private int m_Coin;
+    private int m_Exp;
+
+    private int m_TestMaskCount;
 
     #endregion
 
@@ -20,11 +26,49 @@ public class GameModel : Model
 
     public override string Name => Consts.M_GameModel;
 
-    public bool IsPlay { get; set; } = true;
+    public bool IsPlay
+    {
+        get { return m_IsPlay; }
 
-    public bool IsPause { get; set; } = false;
+        set { m_IsPlay = value; }
+    }
 
-    public int Invincible { get; set; }
+    public bool IsPause
+    {
+        get { return m_IsPause; }
+
+        set { m_IsPause = value; }
+    }
+
+    public int TestMaskCount
+    {
+        get { return m_TestMaskCount; }
+
+        set { m_TestMaskCount = value; }
+    }
+
+    public int Exp
+    {
+        get { return m_Exp; }
+
+        set
+        {
+            while (value > 500 + Level * 100) //该升级了
+            {
+                value -= 500 + Level * 100;
+                Level++;
+            }
+
+            m_Exp = value;
+        }
+    }
+
+    public int Level
+    {
+        get { return m_Level; }
+
+        set { m_Level = value; }
+    }
 
     public int Coin
     {
@@ -44,7 +88,10 @@ public class GameModel : Model
     //初始化
     public void Init()
     {
+        m_Exp = 0;
+        m_Level = 1;
         m_Coin = Consts.InitCoin;
+        m_TestMaskCount = 2;
     }
 
     //扣除金币

@@ -11,9 +11,15 @@
     public const string E_ContinueGame = "E_ContinueGame"; //继续游戏/Resume播放完成后继续游戏
     public const string E_EndGame = "E_EndGame"; //结束游戏
 
+    #region UI
+
     public const string E_FinalShowUI = "E_FinalShowUI"; //结算事件
 
     public const string E_BriberyClick = "E_BriberyClick"; //贿赂
+
+    public const string E_HitItem = "E_HitItem";
+
+    #endregion
 
     #endregion
 
@@ -30,7 +36,6 @@
 
     public const string V_MainMenu = "V_MainMenu";
     public const string V_UIBoard = "V_UIBoard";
-    public const string V_UIGame2 = "V_UIGame2";
 
     public const string V_Pause = "V_Pause";
     public const string V_Resume = "V_Resume";
@@ -57,4 +62,10 @@
     public const int InitCoin = 5000; //初始金币
 
     #endregion
+}
+
+//吃到奖励物品类型
+public enum ItemType
+{
+    TestItemType
 }

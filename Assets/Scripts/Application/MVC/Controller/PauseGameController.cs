@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class PauseGameController : Controller
 {
     public override void Execute(object data)

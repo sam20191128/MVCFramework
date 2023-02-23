@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +23,7 @@ public class UIBoard : View
         pauseBtn = transform.GetChild(0).GetChild(0).GetComponent<Button>();
         testMaskBtn = transform.GetChild(0).GetChild(1).GetComponent<Button>();
         pauseBtn.onClick.AddListener(OnPauseClick);
-        testMaskBtn.onClick.AddListener(OnInvincibleClick);
+        testMaskBtn.onClick.AddListener(TestMaskClick);
 
         gm = GetModel<GameModel>();
         UpdateUI();
@@ -30,9 +31,7 @@ public class UIBoard : View
 
     private void Update()
     {
-        // if (!gm.IsPause && gm.IsPlay)
-        // {
-        // }
+        UpdateUI();
     }
 
     //暂停按钮点击
@@ -47,14 +46,18 @@ public class UIBoard : View
         SendEvent(Consts.E_PauseGame, e);
     }
 
-    public void OnInvincibleClick()
+    //测试用
+    public void TestMaskClick()
     {
         Sound.Instance.PlayEffect("Se_UI_Button");
-        //XXXArgs e = new XXXArgs
-        //{
-        //    xx=xx
-        //};
-        //SendEvent(Consts.E_XXX, e);
+        // gm.TestMaskCount -= 1;
+        // Debug.Log(gm.TestMaskCount);
+        ItemArgs e = new ItemArgs
+        {
+            hitCount = 1,
+            itemType = ItemType.TestItemType
+        };
+        SendEvent(Consts.E_HitItem, e);
     }
 
     public void Hide()
@@ -70,9 +73,10 @@ public class UIBoard : View
     //更新 按钮是否可用
     public void UpdateUI()
     {
-        ShowOrHide(gm.Invincible, testMaskBtn);
+        ShowOrHide(gm.TestMaskCount, testMaskBtn);
     }
 
+    //交互激活或隐藏（道具数量，button）
     private void ShowOrHide(int i, Button btn)
     {
         if (i > 0)

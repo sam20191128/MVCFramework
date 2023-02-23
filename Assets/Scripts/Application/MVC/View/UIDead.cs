@@ -27,7 +27,7 @@ public class UIDead : View
         cancelBtn.onClick.AddListener(CancelClick);
     }
 
-    public int BriberyTime { get; set; } = 1;
+    public int BriberyTime { get; set; } = 1; //贿赂次数
 
     public void Hide()
     {

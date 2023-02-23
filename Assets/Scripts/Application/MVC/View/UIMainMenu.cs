@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIMainMenu : View
 {
-    private Button newGameBtn;
-    private Button continueBtn;
-    private Button quitBtn;
+    private static Button newGameBtn;
+    private static Button continueBtn;
+    private static Button quitBtn;
 
     public override string Name => Consts.V_MainMenu;
 
@@ -35,7 +33,7 @@ public class UIMainMenu : View
     private static void NewGame()
     {
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
-
+        newGameBtn.interactable = false;
         SceneLoader.LoadAddressableScene(Consts.Game1Scene);
         SceneLoader.ExitSceneEvent();
     }
@@ -43,6 +41,7 @@ public class UIMainMenu : View
     private static void ContinueGame()
     {
         SceneLoader.ExitSceneEvent();
+        continueBtn.interactable = false;
 
         GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
 
@@ -57,6 +56,7 @@ public class UIMainMenu : View
     private static void QuitGame()
     {
         Application.Quit();
+        quitBtn.interactable = false;
         Debug.Log("退出游戏");
     }
 }

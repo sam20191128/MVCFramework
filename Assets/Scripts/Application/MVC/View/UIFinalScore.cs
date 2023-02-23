@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.UI;
 
 public class UIFinalScore : View
@@ -17,8 +14,8 @@ public class UIFinalScore : View
 
     private void Awake()
     {
-        replayBtn = transform.GetChild(0).GetChild(0).GetComponent<Button>();
-        toMainMenuBtn = transform.GetChild(0).GetChild(1).GetComponent<Button>();
+        replayBtn = transform.GetChild(0).GetChild(2).GetChild(0).GetComponent<Button>();
+        toMainMenuBtn = transform.GetChild(0).GetChild(2).GetChild(1).GetComponent<Button>();
 
         replayBtn.onClick.AddListener(OnReplayClick);
         toMainMenuBtn.onClick.AddListener(OnMainClick);

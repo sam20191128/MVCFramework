@@ -1,36 +1,35 @@
 ﻿using System;
 
+//抽象类
 public abstract class Controller
 {
-    //执行
-    public abstract void Execute(object data);
+    public abstract void Execute(object data); //执行
 
-    //获取 数据Model
-    protected T GetModel<T>() where T : Model
+    protected T GetModel<T>() where T : Model //获取数据Model
     {
         return MVC.GetModel<T>();
     }
 
-    //获取 View
-    protected T GetView<T>() where T : View
+    protected T GetView<T>() where T : View //获取View
+
     {
         return MVC.GetView<T>();
     }
 
-    //注册 数据Model
-    protected void RegisterModel(Model model)
+    protected void RegisterModel(Model model) //注册数据Model
+
     {
         MVC.RegisterModel(model);
     }
 
-    //注册 View
-    protected void RegisterView(View view)
+    protected void RegisterView(View view) //注册View
+
     {
         MVC.RegisterView(view);
     }
 
-    //注册 Controller
-    protected void RegisterController(string eventName, Type controllerType)
+    protected void RegisterController(string eventName, Type controllerType) //注册Controller
+
     {
         MVC.RegisterController(eventName, controllerType);
     }

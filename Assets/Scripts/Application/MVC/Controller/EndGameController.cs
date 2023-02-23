@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-public class EndGameController : Controller
+﻿public class EndGameController : Controller
 {
     public override void Execute(object data)
     {
