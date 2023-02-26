@@ -2,6 +2,8 @@
 
 public class PlayerManager : View
 {
+    public VariableJoystick variableJoystick;
+
     float h;
     float v;
     public float speed = 6;
@@ -29,11 +31,12 @@ public class PlayerManager : View
     {
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (gm.IsPlay && !gm.IsPause)
         {
             Move();
+            JoystickMove();
         }
     }
 
@@ -41,6 +44,18 @@ public class PlayerManager : View
     {
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
+
+        transform.Translate(camTransform.right * h * speed * Time.deltaTime + camForward * v * speed * Time.deltaTime, Space.World);
+        if (h != 0 || v != 0)
+        {
+            Rotating(h, v);
+        }
+    }
+
+    private void JoystickMove()
+    {
+        h = variableJoystick.Horizontal;
+        v = variableJoystick.Vertical;
 
         transform.Translate(camTransform.right * h * speed * Time.deltaTime + camForward * v * speed * Time.deltaTime, Space.World);
         if (h != 0 || v != 0)
