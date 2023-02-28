@@ -11,6 +11,8 @@ public class UIBoard : View
     private Button testMaskBtn;
     public TMP_Text txtCoin;
 
+    GameModel gm;
+
     int m_Coin = 0;
 
     public override string Name => Consts.V_UIBoard;
@@ -33,11 +35,12 @@ public class UIBoard : View
             case Consts.E_UpdateCoin:
                 CoinArgs e2 = data as CoinArgs;
                 Coin += e2.coin;
+                txtCoin.text = Coin.ToString();
+                gm.Coin = Coin;
                 break;
         }
     }
 
-    GameModel gm;
 
     private void Awake()
     {

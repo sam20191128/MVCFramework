@@ -36,17 +36,17 @@ public class UIDead : View
 
     public void Show()
     {
-        txtBribery.text = (1 * BriberyTime).ToString(); //贿赂需要的钱
+        txtBribery.text = (2 * BriberyTime).ToString(); //贿赂需要的钱
         gameObject.SetActive(true);
     }
 
-    //贿赂
+    //贿赂需要金币
     public void BriberyClick()
     {
         Sound.Instance.PlayEffect("Se_UI_Button");
         CoinArgs e = new CoinArgs
         {
-            coin = BriberyTime * 500
+            coin = BriberyTime * 2
         };
         SendEvent(Consts.E_BriberyClick, e);
     }

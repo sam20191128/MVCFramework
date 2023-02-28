@@ -13,8 +13,6 @@
                 //ui.XXX();
                 gm.TestMaskCount -= e.hitCount; //-次数
                 break;
-            default:
-                break;
         }
 
         ui.UpdateUI();

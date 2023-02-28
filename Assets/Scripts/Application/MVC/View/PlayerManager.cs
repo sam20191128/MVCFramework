@@ -17,40 +17,34 @@ public class PlayerManager : View
     // public Transform camTransform;
     // Vector3 movement;
 
-    [Header("Player")]
-    [Tooltip("Move speed of the character in m/s")]
+    [Header("Player")] [Tooltip("Move speed of the character in m/s")]
     public float MoveSpeed = 2.0f;
 
     [Tooltip("Sprint speed of the character in m/s")]
     public float SprintSpeed = 5.335f;
 
-    [Tooltip("How fast the character turns to face movement direction")]
-    [Range(0.0f, 0.3f)]
+    [Tooltip("How fast the character turns to face movement direction")] [Range(0.0f, 0.3f)]
     public float RotationSmoothTime = 0.12f;
 
     [Tooltip("Acceleration and deceleration")]
     public float SpeedChangeRate = 10.0f;
 
-    [Space(10)]
-    [Tooltip("The height the player can jump")]
+    [Space(10)] [Tooltip("The height the player can jump")]
     public float JumpHeight = 1.2f;
 
     [Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
     public float Gravity = -15.0f;
 
-    [Space(10)]
-    [Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
+    [Space(10)] [Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
     public float JumpTimeout = 0.50f;
 
     [Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
     public float FallTimeout = 0.15f;
 
-    [Header("Player Grounded")]
-    [Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
+    [Header("Player Grounded")] [Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
     public bool Grounded = true;
 
-    [Tooltip("Useful for rough ground")]
-    public float GroundedOffset = -0.14f;
+    [Tooltip("Useful for rough ground")] public float GroundedOffset = -0.14f;
 
     [Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
     public float GroundedRadius = 0.28f;
@@ -58,8 +52,7 @@ public class PlayerManager : View
     [Tooltip("What layers the character uses as ground")]
     public LayerMask GroundLayers;
 
-    [Header("Cinemachine")]
-    [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
+    [Header("Cinemachine")] [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
     public GameObject CinemachineCameraTarget;
 
     [Tooltip("How far in degrees can you move the camera up")]
@@ -410,7 +403,7 @@ public class PlayerManager : View
     }
 
     //item有关
-    int m_DoubleTime = 1;
+    int m_Coin = 1;
 
     //吃金币
     public void HitCoin()
@@ -418,7 +411,7 @@ public class PlayerManager : View
         //print("eat");
         CoinArgs e = new CoinArgs
         {
-            coin = m_DoubleTime
+            coin = m_Coin
         };
         SendEvent(Consts.E_UpdateCoin, e);
     }

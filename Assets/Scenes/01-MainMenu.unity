@@ -3207,7 +3207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &289486560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3286,7 +3286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &290574298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5841,7 +5841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &493606591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7310,7 +7310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &608291046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8149,7 +8149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &662422108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8228,7 +8228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &667984420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9798,7 +9798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &797369036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12442,7 +12442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &982373574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13778,7 +13778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &1107694229
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14839,7 +14839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &1227911755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23269,7 +23269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &1504823241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24359,7 +24359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &1573363986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24875,7 +24875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &1653328642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25461,7 +25461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &1727119950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26309,7 +26309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &1823106541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27395,7 +27395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &1911585164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27711,7 +27711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1001 &1936242803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27798,7 +27798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
 --- !u!1 &1937353446
 GameObject:
   m_ObjectHideFlags: 0
@@ -28902,12 +28902,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -30382,4 +30382,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8636b89f69d622a4f89359dd7a5b3278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 60
+  rotateSpeed: 60
