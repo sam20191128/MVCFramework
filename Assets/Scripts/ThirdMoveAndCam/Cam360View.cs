@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Cam360View : MonoBehaviour
 {
-    public VariableJoystick variableJoystick;
+    //public VariableJoystick variableJoystick;
 
     public Transform target;
     public float xSpeed = 200;
@@ -39,12 +39,12 @@ public class Cam360View : MonoBehaviour
                 x += Input.GetAxis("Mouse X") * xSpeed * 0.02f;
                 y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
             }
-            else
-            {
-                x += variableJoystick.Horizontal * xSpeed * 0.005f;
-                y -= variableJoystick.Vertical * ySpeed * 0.005f;
-                y = ClampAngle(y, yMinLimit, yMaxLimit);
-            }
+            // else
+            // {
+            //     x += variableJoystick.Horizontal * xSpeed * 0.005f;
+            //     y -= variableJoystick.Vertical * ySpeed * 0.005f;
+            //     y = ClampAngle(y, yMinLimit, yMaxLimit);
+            // }
 
             distance -= Input.GetAxis("Mouse ScrollWheel") * mSpeed;
             distance = Mathf.Clamp(distance, minDistance, maxDistance);
