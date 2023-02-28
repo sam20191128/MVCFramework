@@ -19,6 +19,8 @@
 
     public const string E_HitItem = "E_HitItem";
 
+    public const string E_UpdateCoin = "E_UpdateCoin"; //CoinArgs
+
     #endregion
 
     #endregion
@@ -59,7 +61,7 @@
 
     #region 常量
 
-    public const int InitCoin = 5000; //初始金币
+    public const int InitCoin = 0; //初始金币
 
     #endregion
 }

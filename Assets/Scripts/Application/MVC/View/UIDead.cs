@@ -36,7 +36,7 @@ public class UIDead : View
 
     public void Show()
     {
-        txtBribery.text = (500 * BriberyTime).ToString(); //贿赂需要的钱
+        txtBribery.text = (1 * BriberyTime).ToString(); //贿赂需要的钱
         gameObject.SetActive(true);
     }
 

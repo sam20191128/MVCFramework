@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,12 +9,32 @@ public class UIBoard : View
 {
     private Button pauseBtn;
     private Button testMaskBtn;
+    public TMP_Text txtCoin;
+
+    int m_Coin = 0;
 
     public override string Name => Consts.V_UIBoard;
+
+    public int Coin
+    {
+        get { return m_Coin; }
+        set
+        {
+            m_Coin = value;
+            txtCoin.text = value.ToString();
+        }
+    }
 
     public override void HandleEvent(string name, object data)
     {
         //接受事件后，处理事件
+        switch (name)
+        {
+            case Consts.E_UpdateCoin:
+                CoinArgs e2 = data as CoinArgs;
+                Coin += e2.coin;
+                break;
+        }
     }
 
     GameModel gm;
@@ -22,11 +43,14 @@ public class UIBoard : View
     {
         pauseBtn = transform.GetChild(0).GetChild(0).GetComponent<Button>();
         testMaskBtn = transform.GetChild(0).GetChild(1).GetComponent<Button>();
+        txtCoin = transform.GetChild(0).GetChild(2).GetComponent<TMP_Text>();
         pauseBtn.onClick.AddListener(OnPauseClick);
         testMaskBtn.onClick.AddListener(TestMaskClick);
 
         gm = GetModel<GameModel>();
         UpdateUI();
+
+        txtCoin.text = Coin.ToString();
     }
 
     private void Update()
@@ -89,5 +113,10 @@ public class UIBoard : View
             btn.interactable = false;
             btn.transform.Find("Mask").gameObject.SetActive(true);
         }
+    }
+
+    public override void RegisterAttentionEvent()
+    {
+        AttentionList.Add(Consts.E_UpdateCoin);
     }
 }

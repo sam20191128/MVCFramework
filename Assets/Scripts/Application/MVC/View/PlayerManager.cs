@@ -146,12 +146,12 @@ public class PlayerManager : View
     {
         _hasAnimator = TryGetComponent(out _animator);
 
-        if (gm.IsPlay)
-        {
-            JumpAndGravity();
-            GroundedCheck();
-            Move();
-        }
+        // if (gm.IsPlay)
+        // {
+        //     JumpAndGravity();
+        //     GroundedCheck();
+        //     Move();
+        // }
     }
 
     private void FixedUpdate()
@@ -160,6 +160,10 @@ public class PlayerManager : View
         {
             //Move();
             //JoystickMove();
+
+            JumpAndGravity();
+            GroundedCheck();
+            Move();
         }
     }
 
@@ -403,5 +407,19 @@ public class PlayerManager : View
             //sendEvent 游戏结束
             SendEvent(Consts.E_EndGame);
         }
+    }
+
+    //item有关
+    int m_DoubleTime = 1;
+
+    //吃金币
+    public void HitCoin()
+    {
+        //print("eat");
+        CoinArgs e = new CoinArgs
+        {
+            coin = m_DoubleTime
+        };
+        SendEvent(Consts.E_UpdateCoin, e);
     }
 }
