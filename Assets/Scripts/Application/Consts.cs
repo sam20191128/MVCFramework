@@ -14,12 +14,9 @@
     #region UI
 
     public const string E_FinalShowUI = "E_FinalShowUI"; //结算事件
-
     public const string E_BriberyClick = "E_BriberyClick"; //贿赂
-
+    public const string E_UpdateCoin = "E_UpdateCoin";
     public const string E_HitItem = "E_HitItem";
-
-    public const string E_UpdateCoin = "E_UpdateCoin"; //CoinArgs
 
     #endregion
 

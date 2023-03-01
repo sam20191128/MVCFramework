@@ -3,9 +3,8 @@
     public override void Execute(object data)
     {
         ItemArgs e = data as ItemArgs; //碰到的物品信息
-        PlayerManager player = GetView<PlayerManager>();
         GameModel gm = GetModel<GameModel>();
-        UIBoard ui = GetView<UIBoard>(); //显示UI
+        UIBoard board = GetView<UIBoard>(); //显示UI
         switch (e.itemType)
         {
             case ItemType.TestItemType:
@@ -15,6 +14,6 @@
                 break;
         }
 
-        ui.UpdateUI();
+        board.UpdateUI();
     }
 }

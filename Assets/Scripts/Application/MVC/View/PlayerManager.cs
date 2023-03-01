@@ -402,17 +402,17 @@ public class PlayerManager : View
         }
     }
 
-    //item有关
-    int m_Coin = 1;
-
-    //吃金币
-    public void HitCoin()
-    {
-        //print("eat");
-        CoinArgs e = new CoinArgs
-        {
-            coin = m_Coin
-        };
-        SendEvent(Consts.E_UpdateCoin, e);
-    }
+    // //item有关
+    // int m_Coin = 1;
+    //
+    // //吃金币
+    // public void HitCoin()
+    // {
+    //     //print("eat");
+    //     CoinArgs e = new CoinArgs
+    //     {
+    //         coin = m_Coin
+    //     };
+    //     SendEvent(Consts.E_UpdateCoin, e);
+    // }
 }

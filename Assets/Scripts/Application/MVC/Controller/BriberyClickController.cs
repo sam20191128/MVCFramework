@@ -4,14 +4,17 @@ public class BriberyClickController : Controller
     public override void Execute(object data)
     {
         CoinArgs e = data as CoinArgs;
-        UIDead dead = GetView<UIDead>();
         GameModel gm = GetModel<GameModel>();
+        UIDead dead = GetView<UIDead>();
+        UIBoard board = GetView<UIBoard>();
+        UIResume resume = GetView<UIResume>();
 
         if (gm.GetMoney(e.coin))
         {
             dead.Hide();
             dead.BriberyTime++;
-            UIResume resume = GetView<UIResume>();
+            board.txtCoin.text = gm.Coin.ToString();
+
             resume.StartCount();
         }
     }

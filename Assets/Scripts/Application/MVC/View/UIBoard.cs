@@ -33,10 +33,11 @@ public class UIBoard : View
         switch (name)
         {
             case Consts.E_UpdateCoin:
-                CoinArgs e2 = data as CoinArgs;
-                Coin += e2.coin;
-                txtCoin.text = Coin.ToString();
-                gm.Coin = Coin;
+                CoinArgs e = data as CoinArgs;
+                // Coin += e2.coin;
+                // gm.Coin = Coin;
+                gm.Coin += e.coin;
+                txtCoin.text = gm.Coin.ToString();
                 break;
         }
     }
@@ -51,9 +52,10 @@ public class UIBoard : View
         testMaskBtn.onClick.AddListener(TestMaskClick);
 
         gm = GetModel<GameModel>();
-        UpdateUI();
 
-        txtCoin.text = Coin.ToString();
+        txtCoin.text = gm.Coin.ToString();
+
+        UpdateUI();
     }
 
     private void Update()
@@ -77,8 +79,6 @@ public class UIBoard : View
     public void TestMaskClick()
     {
         Sound.Instance.PlayEffect("Se_UI_Button");
-        // gm.TestMaskCount -= 1;
-        // Debug.Log(gm.TestMaskCount);
         ItemArgs e = new ItemArgs
         {
             hitCount = 1,
@@ -116,10 +116,5 @@ public class UIBoard : View
             btn.interactable = false;
             btn.transform.Find("Mask").gameObject.SetActive(true);
         }
-    }
-
-    public override void RegisterAttentionEvent()
-    {
-        AttentionList.Add(Consts.E_UpdateCoin);
     }
 }

@@ -12,6 +12,7 @@ public class StartUpController : Controller
         RegisterController(Consts.E_ContinueGame, typeof(ContinueGameController));
         RegisterController(Consts.E_EndGame, typeof(EndGameController));
 
+        RegisterController(Consts.E_UpdateCoin, typeof(UpdateCoinController));
         RegisterController(Consts.E_HitItem, typeof(HitItemController));
 
         RegisterController(Consts.E_FinalShowUI, typeof(FinalShowUIController)); //最终结算

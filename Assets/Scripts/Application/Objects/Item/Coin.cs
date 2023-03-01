@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class Coin : Item
 {
-    public override void HitPlayer(Transform pos)
-    {
-        Sound.Instance.PlayEffect("Se_UI_JinBi");
-
-        Destroy(gameObject);
-    }
+    int m_Coin = 1;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(Tag.player))
         {
-            HitPlayer(other.transform);
-            other.SendMessage("HitCoin", SendMessageOptions.RequireReceiver);
+            HitPlayer();
+
+            //吃金币
+            CoinArgs e = new CoinArgs
+            {
+                coin = m_Coin
+            };
+            SendEvent(Consts.E_UpdateCoin, e);
         }
+    }
+
+    public void HitPlayer()
+    {
+        Sound.Instance.PlayEffect("Se_UI_JinBi");
+
+        Destroy(gameObject);
     }
 }
