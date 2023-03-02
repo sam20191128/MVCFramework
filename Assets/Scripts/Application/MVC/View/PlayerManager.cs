@@ -393,7 +393,7 @@ public class PlayerManager : View
         if (other.gameObject.tag == Tag.dead) //游戏结束
         {
             //声音
-            Sound.Instance.PlayEffect("Se_UI_End");
+            Sound.Instance.PlayEffectAudio("Se_UI_End");
             //other.gameObject.SendMessage("HitPlayer", transform.position);
             Destroy(other.gameObject);
 

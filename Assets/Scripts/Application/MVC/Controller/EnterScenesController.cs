@@ -10,7 +10,7 @@ public class EnterScenesController : Controller
         {
             case Consts.MainMenuScene:
                 RegisterView(GameObject.Find("Canvas").transform.Find("UIMainMenu").GetComponent<UIMainMenu>());
-                Sound.Instance.PlayBG("Bgm_JieMian");
+                Sound.Instance.PlayBGMAudio("Bgm_JieMian");
                 Debug.Log("EnterScenesController---Consts.MainMenuScene");
                 break;
 
@@ -21,7 +21,7 @@ public class EnterScenesController : Controller
                 RegisterView(GameObject.Find("Canvas").transform.Find("UIDead").GetComponent<UIDead>());
                 RegisterView(GameObject.Find("Canvas").transform.Find("UIFinalScore").GetComponent<UIFinalScore>());
 
-                Sound.Instance.PlayBG("Bgm_ZhanDou");
+                Sound.Instance.PlayBGMAudio("Bgm_ZhanDou");
                 gm = GetModel<GameModel>();
                 gm.IsPause = false;
                 gm.IsPlay = true;

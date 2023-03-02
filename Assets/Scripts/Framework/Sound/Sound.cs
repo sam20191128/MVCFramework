@@ -1,57 +1,56 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
-using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class Sound : Singleton<Sound>
 {
-    private AudioSource m_Bg;
-    private AudioSource m_effect;
+    private AudioSource bgmSource;
+    private AudioSource effectAudioSource;
 
     protected override void Awake()
     {
         base.Awake();
-        m_Bg = gameObject.AddComponent<AudioSource>();
-        m_effect = gameObject.AddComponent<AudioSource>();
-        m_Bg.playOnAwake = false;
-        m_Bg.loop = true;
+        bgmSource = gameObject.AddComponent<AudioSource>();
+        effectAudioSource = gameObject.AddComponent<AudioSource>();
+        bgmSource.playOnAwake = false;
+        bgmSource.loop = true;
     }
 
     //播放背景音乐
-    public async void PlayBG(string audioName)
+    public async void PlayBGMAudio(string audioName)
     {
         string oldName;
-        if (m_Bg.clip == null)
+
+        if (bgmSource.clip == null)
         {
             oldName = "";
         }
         else
         {
-            oldName = m_Bg.clip.name;
+            oldName = bgmSource.clip.name;
         }
 
         if (oldName != audioName)
         {
             //加载
-            AudioClip clip = await Addressables.LoadAssetAsync<AudioClip>(audioName).Task;
+            AudioClip audioClip = await Addressables.LoadAssetAsync<AudioClip>(audioName).Task;
 
             //播放
-            if (clip != null)
+            if (audioClip != null)
             {
-                m_Bg.clip = clip;
-                m_Bg.Play();
+                bgmSource.clip = audioClip;
+                bgmSource.Play();
             }
 
-            Debug.Log(clip.name);
+            Debug.Log(audioClip.name);
         }
     }
 
     //音效
-    public async void PlayEffect(string audioName)
+    public async void PlayEffectAudio(string audioName)
     {
-        AudioClip clip = await Addressables.LoadAssetAsync<AudioClip>(audioName).Task;
+        AudioClip audioClip = await Addressables.LoadAssetAsync<AudioClip>(audioName).Task;
+        
         //播放
-        m_effect.PlayOneShot(clip);
+        effectAudioSource.PlayOneShot(audioClip);
     }
 }

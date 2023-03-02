@@ -47,13 +47,13 @@ public class UIPause : View
     public void OnResumeClick()
     {
         Hide();
-        Sound.Instance.PlayEffect("Se_UI_Button");
+        Sound.Instance.PlayEffectAudio("Se_UI_Button");
         SendEvent(Consts.E_ResumeGame);
     }
 
     private static void OnToMainMenuClick()
     {
-        GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
+        GameRoot.Instance.sound.PlayEffectAudio("Se_UI_Button");
 
         SceneLoader.LoadAddressableScene(Consts.MainMenuScene);
         SceneLoader.ExitSceneEvent();

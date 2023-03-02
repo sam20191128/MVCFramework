@@ -23,7 +23,7 @@ public class Coin : Item
 
     public void HitPlayer()
     {
-        Sound.Instance.PlayEffect("Se_UI_JinBi");
+        Sound.Instance.PlayEffectAudio("Se_UI_JinBi");
 
         Destroy(gameObject);
     }

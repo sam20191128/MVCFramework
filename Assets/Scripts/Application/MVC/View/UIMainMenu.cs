@@ -32,7 +32,7 @@ public class UIMainMenu : View
 
     private static void NewGame()
     {
-        GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
+        GameRoot.Instance.sound.PlayEffectAudio("Se_UI_Button");
         newGameBtn.interactable = false;
         SceneLoader.LoadAddressableScene(Consts.Game1Scene);
         SceneLoader.ExitSceneEvent();
@@ -43,7 +43,7 @@ public class UIMainMenu : View
         SceneLoader.ExitSceneEvent();
         continueBtn.interactable = false;
 
-        GameRoot.Instance.sound.PlayEffect("Se_UI_Button");
+        GameRoot.Instance.sound.PlayEffectAudio("Se_UI_Button");
 
         // //转换场景,读取进度
         // if (SaveManager.Instance.SceneName != "")
