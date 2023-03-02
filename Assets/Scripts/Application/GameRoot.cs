@@ -4,8 +4,6 @@ using UnityEngine;
 [RequireComponent(typeof(Sound))]
 public class GameRoot : Singleton<GameRoot>
 {
-    [HideInInspector] public Sound sound;
-
     protected override void Awake()
     {
         base.Awake();
@@ -14,8 +12,6 @@ public class GameRoot : Singleton<GameRoot>
 
     private void Start()
     {
-        sound = Sound.Instance;
-
         //注册StartUpController
         RegisterController(Consts.E_StartUp, typeof(StartUpController));
 
@@ -27,7 +23,7 @@ public class GameRoot : Singleton<GameRoot>
         {
             scenesName = Consts.MainMenuScene
         };
-        
+
         //发送事件
         SendEvent(Consts.E_EnterScenes, e);
     }

@@ -139,12 +139,12 @@ public class PlayerManager : View
     {
         _hasAnimator = TryGetComponent(out _animator);
 
-        // if (gm.IsPlay)
-        // {
-        //     JumpAndGravity();
-        //     GroundedCheck();
-        //     Move();
-        // }
+        if (gm.IsPlay)
+        {
+            JumpAndGravity();
+            GroundedCheck();
+            //Move();
+        }
     }
 
     private void FixedUpdate()
@@ -154,8 +154,8 @@ public class PlayerManager : View
             //Move();
             //JoystickMove();
 
-            JumpAndGravity();
-            GroundedCheck();
+            //JumpAndGravity();
+            //GroundedCheck();
             Move();
         }
     }

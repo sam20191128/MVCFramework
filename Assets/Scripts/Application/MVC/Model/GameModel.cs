@@ -77,7 +77,7 @@ public class GameModel : Model
         set
         {
             m_Coin = value;
-            Debug.Log("现在还剩" + value + "钱");
+            Debug.Log("现在还剩" + value + "金币");
         }
     }
 

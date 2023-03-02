@@ -4,4 +4,5 @@ public static class Tag
     public const string player = "Player";
     public const string enemy = "Enemy";
     public const string dead = "Dead";
+    public const string magnet = "Magnet";
 }

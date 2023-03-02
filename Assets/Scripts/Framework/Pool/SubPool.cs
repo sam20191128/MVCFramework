@@ -1,47 +1,48 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
-//子池子
 public class SubPool
 {
-    //集合
-    private List<GameObject> m_objecs = new List<GameObject>();
+    //GameObject列表
+    private List<GameObject> m_GameObjects = new List<GameObject>();
 
-    //预设
-    private GameObject m_prefab;
+    //Prefab
+    private GameObject m_goPrefab;
 
-    //名字
-    public string Name
-    {
-        get { return m_prefab.name; }
-    }
+    public string Name => m_goPrefab.name;
 
     //父物体的位置
-    private Transform m_parent;
+    private Transform m_ParentTransform;
 
-    public SubPool(Transform parent, GameObject go)
+    //子池子
+    public SubPool(Transform mParent, GameObject mGO)
     {
-        m_prefab = go;
-        m_parent = parent;
+        m_goPrefab = mGO;
+        m_ParentTransform = mParent;
     }
 
     //取出物体
-    public GameObject Spawn()
+    public async Task<GameObject> Spawn()
     {
         GameObject go = null;
-        foreach (var obj in m_objecs)
+
+        foreach (var obj in m_GameObjects)
         {
-            if (!obj.activeSelf)
+            //列表里包含
+            if (!obj.activeSelf) //这个游戏对象的本地活动状态=false
             {
                 go = obj;
             }
         }
 
+        //列表里不包含
         if (go == null)
         {
-            go = GameObject.Instantiate<GameObject>(m_prefab);
-            go.transform.parent = m_parent;
-            m_objecs.Add(go);
+            go = await Addressables.InstantiateAsync(m_goPrefab).Task; //实例化
+            go.transform.parent = m_ParentTransform; //设置父级
+            m_GameObjects.Add(go); //加入列表
         }
 
         go.SetActive(true);
@@ -51,7 +52,7 @@ public class SubPool
     }
 
     //回收物体
-    public void Unspawn(GameObject go)
+    public void UnSpawn(GameObject go)
     {
         if (Contain(go))
         {
@@ -61,13 +62,13 @@ public class SubPool
     }
 
     //回收所有物体
-    public void UnspawnAll()
+    public void UnSpawnAll()
     {
-        foreach (var obj in m_objecs)
+        foreach (var obj in m_GameObjects)
         {
-            if (obj.activeSelf)
+            if (obj.activeSelf) //这个游戏对象的本地活动状态=true
             {
-                Unspawn(obj);
+                UnSpawn(obj);
             }
         }
     }
@@ -75,6 +76,6 @@ public class SubPool
     //判断是否属于List里边
     public bool Contain(GameObject go)
     {
-        return m_objecs.Contains(go);
+        return m_GameObjects.Contains(go);
     }
 }

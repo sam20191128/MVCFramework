@@ -53,7 +53,7 @@ public class UIPause : View
 
     private static void OnToMainMenuClick()
     {
-        GameRoot.Instance.sound.PlayEffectAudio("Se_UI_Button");
+        Sound.Instance.PlayEffectAudio("Se_UI_Button");
 
         SceneLoader.LoadAddressableScene(Consts.MainMenuScene);
         SceneLoader.ExitSceneEvent();

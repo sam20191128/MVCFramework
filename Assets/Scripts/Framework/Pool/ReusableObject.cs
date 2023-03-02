@@ -1,8 +1,11 @@
 using UnityEngine;
 
-public abstract class ReusableObject : MonoBehaviour, IReusable
+//可重用的对象,使用对象池的物体继承自此类
+public abstract class ReusableObject : View, IReusable
 {
-    public abstract void OnSpawn();
+    //抽象类
+    
+    public abstract void OnSpawn(); //取出
 
-    public abstract void OnUnSpawn();
+    public abstract void OnUnSpawn(); //回收
 }
