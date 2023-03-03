@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Coin : Item
@@ -36,7 +35,7 @@ public class Coin : Item
             {
                 coin = m_Coin
             };
-            SendEvent(Consts.E_UpdateCoin, e);
+            GameRoot.Instance.SendEvent(Consts.E_UpdateCoin, e);
         }
         else if (other.CompareTag(Tag.magnet))
         {
@@ -51,7 +50,7 @@ public class Coin : Item
         //effect.transform.position = transform.position;
 
         //2.声音
-        Sound.Instance.PlayEffectAudio("Se_UI_JinBi");
+        Sound.Instance.PlayEffect("Se_UI_JinBi");
 
         //3.回收
         ObjectPool.Instance.UnSpawn(gameObject);
@@ -76,7 +75,7 @@ public class Coin : Item
                 {
                     coin = m_Coin
                 };
-                SendEvent(Consts.E_UpdateCoin, e);
+                GameRoot.Instance.SendEvent(Consts.E_UpdateCoin, e);
             }
 
             yield return 0;

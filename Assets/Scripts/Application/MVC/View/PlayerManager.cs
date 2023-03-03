@@ -141,9 +141,6 @@ public class PlayerManager : View
 
         if (gm.IsPlay)
         {
-            JumpAndGravity();
-            GroundedCheck();
-            //Move();
         }
     }
 
@@ -154,8 +151,8 @@ public class PlayerManager : View
             //Move();
             //JoystickMove();
 
-            //JumpAndGravity();
-            //GroundedCheck();
+            JumpAndGravity();
+            GroundedCheck();
             Move();
         }
     }
@@ -353,6 +350,7 @@ public class PlayerManager : View
         // when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
         Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
     }
+
     // private void Move()
     // {
     //     h = Input.GetAxis("Horizontal");
@@ -393,26 +391,11 @@ public class PlayerManager : View
         if (other.gameObject.tag == Tag.dead) //游戏结束
         {
             //声音
-            Sound.Instance.PlayEffectAudio("Se_UI_End");
-            //other.gameObject.SendMessage("HitPlayer", transform.position);
+            Sound.Instance.PlayEffect("Se_UI_End");
             Destroy(other.gameObject);
 
             //sendEvent 游戏结束
             SendEvent(Consts.E_EndGame);
         }
     }
-
-    // //item有关
-    // int m_Coin = 1;
-    //
-    // //吃金币
-    // public void HitCoin()
-    // {
-    //     //print("eat");
-    //     CoinArgs e = new CoinArgs
-    //     {
-    //         coin = m_Coin
-    //     };
-    //     SendEvent(Consts.E_UpdateCoin, e);
-    // }
 }

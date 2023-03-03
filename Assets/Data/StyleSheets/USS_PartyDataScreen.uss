@@ -1,6 +1,0 @@
-Label {
-    -unity-font-style: bold-and-italic;
-    font-size: 25px;
-    -unity-text-align: upper-center;
-    text-shadow: 1px 1px 1px rgb(0, 0, 0);
-}

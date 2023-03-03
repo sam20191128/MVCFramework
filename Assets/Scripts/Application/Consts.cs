@@ -44,18 +44,6 @@
 
     #endregion
 
-    #region 场景
-
-    //场景名字
-    public const string MainMenuScene = "01-MainMenu";
-    public const string Game1Scene = "02-Game1";
-    public const string Game2Scene = "03-Game2";
-
-    //场景切换淡入淡出过渡
-    public const string UssFade = "fade";
-
-    #endregion
-
     #region 常量
 
     public const int InitCoin = 0; //初始金币

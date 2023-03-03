@@ -38,15 +38,13 @@ public class UIFinalScore : View
 
     public void OnReplayClick()
     {
-        Sound.Instance.PlayEffectAudio("Se_UI_Button");
-        SceneLoader.LoadAddressableScene(Consts.Game1Scene);
-        SceneLoader.ExitSceneEvent();
+        Sound.Instance.PlayEffect("Se_UI_Button");
+        SceneLoader.Instance.LoadLevel(1);
     }
 
     public void OnMainClick()
     {
-        Sound.Instance.PlayEffectAudio("Se_UI_Button");
-        SceneLoader.LoadAddressableScene(Consts.MainMenuScene);
-        SceneLoader.ExitSceneEvent();
+        Sound.Instance.PlayEffect("Se_UI_Button");
+        SceneLoader.Instance.LoadLevel(0);
     }
 }

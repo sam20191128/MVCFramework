@@ -43,7 +43,7 @@ public class UIDead : View
     //贿赂需要金币
     public void BriberyClick()
     {
-        Sound.Instance.PlayEffectAudio("Se_UI_Button");
+        Sound.Instance.PlayEffect("Se_UI_Button");
         CoinArgs e = new CoinArgs
         {
             coin = BriberyTime * 2
@@ -54,7 +54,7 @@ public class UIDead : View
     //拒绝贿赂
     public void CancelClick()
     {
-        Sound.Instance.PlayEffectAudio("Se_UI_Button");
+        Sound.Instance.PlayEffect("Se_UI_Button");
         SendEvent(Consts.E_FinalShowUI);
     }
 }

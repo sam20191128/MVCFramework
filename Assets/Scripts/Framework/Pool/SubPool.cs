@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 public class SubPool
 {
@@ -24,7 +22,7 @@ public class SubPool
     }
 
     //取出物体
-    public async Task<GameObject> Spawn()
+    public GameObject Spawn()
     {
         GameObject go = null;
 
@@ -40,7 +38,7 @@ public class SubPool
         //列表里不包含
         if (go == null)
         {
-            go = await Addressables.InstantiateAsync(m_goPrefab).Task; //实例化
+            go = GameObject.Instantiate(m_goPrefab);
             go.transform.parent = m_ParentTransform; //设置父级
             m_GameObjects.Add(go); //加入列表
         }

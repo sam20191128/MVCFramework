@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.AddressableAssets;
 
 public class ObjectPool : Singleton<ObjectPool>
 {
@@ -12,7 +10,7 @@ public class ObjectPool : Singleton<ObjectPool>
     private Dictionary<string, SubPool> m_PoolDictionary = new Dictionary<string, SubPool>(); //<名字，子池子>
 
     //取出
-    public Task<GameObject> Spawn(string name, Transform transform)
+    public GameObject Spawn(string name, Transform transform)
     {
         SubPool subPool = null;
 
@@ -58,29 +56,13 @@ public class ObjectPool : Singleton<ObjectPool>
     }
 
     //注册新池子
-    async Task RegisterNew(string names, Transform transform)
+    private void RegisterNew(string names, Transform transform)
     {
         //资源目录
         string path = ResourceDir + "/" + names;
 
         //生成预制体
-
-        //1.
-        //Addressables.LoadAssetAsync<GameObject>(path).Completed += (obj) =>
-        //{
-        //    // 预设物体
-        //    GameObject gameObject = obj.Result;
-
-        //    //新建池子
-        //    SubPool subPool = new SubPool(transform, gameObject);
-
-        //    //加入池子字典
-        //    m_PoolDictionary.Add(subPool.Name, subPool);
-        //};
-
-        //2.
-        GameObject gameObject = await Addressables.LoadAssetAsync<GameObject>(path).Task;
-        Debug.Log("注册对象池:" + gameObject.name);
+        GameObject gameObject = Resources.Load<GameObject>(path);
 
         //新建池子
         SubPool subPool = new SubPool(transform, gameObject);

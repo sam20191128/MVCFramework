@@ -18,14 +18,15 @@ public class GameRoot : Singleton<GameRoot>
         //游戏启动
         SendEvent(Consts.E_StartUp);
 
-        //事件参数
-        ScenesArgs e = new ScenesArgs()
+        //加载新场景事件的数据
+        ScenesArgs scenesArgs = new ScenesArgs()
         {
-            scenesName = Consts.MainMenuScene
+            //获取当前场景索引
+            scenesIndex = 0
         };
 
         //发送事件
-        SendEvent(Consts.E_EnterScenes, e);
+        SendEvent(Consts.E_EnterScenes, scenesArgs);
     }
 
     //发送事件

@@ -5,11 +5,7 @@ using UnityEngine;
 public class Item : ReusableObject
 {
     public float rotateSpeed = 60;
-    public override string Name { get; }
 
-    public override void HandleEvent(string name, object data)
-    {
-    }
 
     public override void OnSpawn()
     {

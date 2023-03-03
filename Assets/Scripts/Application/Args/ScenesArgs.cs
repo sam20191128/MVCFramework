@@ -1,4 +1,4 @@
 public class ScenesArgs
 {
-    public string scenesName;
+    public int scenesIndex;
 }

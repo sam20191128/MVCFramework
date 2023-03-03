@@ -12,7 +12,7 @@ public class GameModel : Model
     private bool m_IsPlay = true;
     private bool m_IsPause = false;
 
-    public string lastSceneName;
+    public int lastIndex = 0;
 
     private int m_Level;
     private int m_Coin;

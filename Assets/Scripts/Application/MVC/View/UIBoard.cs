@@ -66,7 +66,7 @@ public class UIBoard : View
     //暂停按钮点击
     public void OnPauseClick()
     {
-        Sound.Instance.PlayEffectAudio("Se_UI_Button");
+        Sound.Instance.PlayEffect("Se_UI_Button");
         PauseArgs e = new PauseArgs
         {
             //暂停游戏时数据
@@ -78,7 +78,7 @@ public class UIBoard : View
     //测试用
     public void TestMaskClick()
     {
-        Sound.Instance.PlayEffectAudio("Se_UI_Button");
+        Sound.Instance.PlayEffect("Se_UI_Button");
         ItemArgs e = new ItemArgs
         {
             hitCount = 1,

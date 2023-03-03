@@ -32,24 +32,17 @@ public class UIMainMenu : View
 
     private static void NewGame()
     {
-        Sound.Instance.PlayEffectAudio("Se_UI_Button");
+        Sound.Instance.PlayEffect("Se_UI_Button");
         newGameBtn.interactable = false;
-        SceneLoader.LoadAddressableScene(Consts.Game1Scene);
-        SceneLoader.ExitSceneEvent();
+        SceneLoader.Instance.LoadLevel(1);
     }
 
     private static void ContinueGame()
     {
-        SceneLoader.ExitSceneEvent();
         continueBtn.interactable = false;
 
-        Sound.Instance.PlayEffectAudio("Se_UI_Button");
-
-        // //转换场景,读取进度
-        // if (SaveManager.Instance.SceneName != "")
-        // {
-        //     SceneController.Instance.TransitionToLoadGame();
-        // }
+        Sound.Instance.PlayEffect("Se_UI_Button");
+        
         Debug.Log("继续游戏");
     }
 
